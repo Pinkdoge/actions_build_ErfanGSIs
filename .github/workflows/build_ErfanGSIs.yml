@@ -14,7 +14,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://svwh.dl.sourceforge.net/project/xiaomi-eu-multilang-miui-roms/xiaomi.eu/MIUI-WEEKLY-RELEASES/20.5.28/xiaomi.eu_multi_MIMAX3_20.5.28_v12-10.zip
+  ROM_URL: http://hugeota.d.miui.com/20.6.1/miui_MI6_20.6.1_d6516060cb_9.0.zip
   ROM_NAME: MIUI
   TZ: Asia/Shanghai
 
@@ -55,12 +55,12 @@ jobs:
        
        - name: 7z Aonly GSI
          run: |
-           7za a -t7z -r MAX3_Aonly_20.5.28-eu.7z ErfanGSIs/output/*
+           7za a -t7z -r MI6_Aonly_20.6.1.7z ErfanGSIs/output/*
        
        - name: Upload Aonly GSI to WeTransfer
          run: |
               curl -sL https://git.io/file-transfer | sh
-              ./transfer wet MAX3_Aonly_20.5.28-eu.7z
+              ./transfer wet MI6_Aonly_20.6.1.7z
            
 #       - name: Make clean
 #         run: sudo rm -rf ErfanGSIs/output/*
